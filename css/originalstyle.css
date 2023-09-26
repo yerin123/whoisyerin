@@ -1,0 +1,95 @@
+*{margin:0; padding:0; box-sizing:border-box;}
+ul{list-style:none;}
+a{text-decoration: none; color:inherit;}
+
+::-webkit-scrollbar{display: none;}/*스크롤바를 가려놓는 속성*/
+
+main{
+  width:100%;
+}
+main > section{
+  width:100%;  
+}
+#main{background-color:#f9b2e0; height:1000px;}
+#about{background-color:#89b6f3; height:800px;}
+#character{background-color:#89f393; height:700px;}
+#project{background-color:#f3eb97; height:500px;}
+#request{background-color:#f3b597; height:700px;}
+
+#main .wrap{
+  padding-top:100px;
+}
+
+#main .txt{
+  width:700px;
+  height:auto;
+  margin:auto;
+}
+
+/*사이드 네비*/
+.sidebar{
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  left:50px;
+}
+.sidebar::before{/*수직선*/
+  content:"";
+  width:1px;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:15px;
+  background-color:#d2d2ea;
+}
+.sidebar > a{
+  display:block;
+  width:30px;
+  height:30px;
+  background-color:#4444ac;
+  color:#0ae5ac;
+  position:relative;
+  z-index: 1;
+  text-align: center;
+  border-radius: 50%;
+  font-size:20px;
+}
+.navi{
+  margin:40px 0;
+}
+.navi > li{
+  font-size:14px;
+  color:#4444ac;
+  margin:40px 0;
+  text-indent:40px;
+  position:relative;
+}
+.navi > li::before{/*동그라미*/
+  content:"";
+  position:absolute;
+  width:16px; height:16px;
+  background-color:#fff;
+  border:2px solid #4444ac;
+  border-radius: 50%;
+  left:6px;
+  cursor:pointer;
+}
+/*하이라이트 효과*/
+.navi > li:hover,
+.navi > li.on{font-weight: bold;}
+
+.navi > li:hover::before,
+.navi > li.on::before{
+  background-color:#4444ac;
+}
+
+#typing{  
+  position:fixed;
+  top:40px;
+  transform:translateY(-50%);
+  left:50px;
+  font-size:30px;
+  line-height:40px;
+  font-weight: bold;
+  color:navy;
+}

@@ -1,0 +1,85 @@
+*{margin:0; padding:0; box-sizing:border-box;}
+ul{list-style:none;}
+a{text-decoration: none; color:inherit;}
+
+::-webkit-scrollbar{display: none;}/*스크롤바를 가려놓는 속성*/
+
+main{
+  width:100%;
+}
+main > section{
+  width:100%;   height:100vh; overflow: auto;
+  scroll-behavior: smooth;
+}
+#main{background-color:#f9b2e0;}
+#about{background-color:#89b6f3;}
+#character{background-color:#89f393;}
+#project{background-color:#f3eb97;}
+#request{background-color:#f3b597;}
+
+#main .wrap{
+  padding-top:100px;
+}
+
+#main .txt{
+  max-width:700px;
+  height:auto;
+  margin:auto;
+}
+
+/*네비*/
+.topbar{
+  width:100%;
+  height:100px;
+  position:fixed;
+  transform:translateY(-50%,-50%);
+}
+
+.navi{  
+  max-width:530px;
+  height:100px;
+  margin:auto;
+}
+.navi li{
+  width:100px;
+  text-align: center;
+  font-size:14px;
+  color:#4444ac;
+  margin:40px 0px;
+  position:relative;
+  display:inline-block;
+}
+/*하이라이트 효과*/
+.navi > li:hover,
+.navi > li.on{font-weight: bold;}
+.navi > li:hover::before,
+.navi > li.on::before{
+  background-color:#4444ac;
+}
+
+.motto{
+  width:100%;
+  height:80px;
+  position:fixed;
+  bottom:0px; 
+}
+
+.motto .wrap{
+  max-width:700px;
+  height:80px;
+  margin:auto;
+}
+
+#typing{
+  text-align: center;
+  font-size:30px;
+  line-height:80px;
+  font-weight: bold;
+  color:navy;
+}
+
+
+@media screen and (max-width:980px){}
+
+
+@media screen and (max-width:768px){}
